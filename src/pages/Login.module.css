@@ -1,0 +1,47 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr min(99ch, 100%) 1fr;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+    place-content: center;
+}
+.wrapper > *{
+    grid-column: 2;
+}
+.full_bleed {
+    width:100%;
+    grid-column: 1 / 4;
+}
+
+.welcome_text{
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+}
+.login_card{
+    height: fit-content;
+    padding: 2rem;
+    max-inline-size: 400px;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+}
+.link{
+    color: rgba(193, 126, 255, 0.377);
+    font-size: 1rem;
+}
+.btn{
+    background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+    color: white;
+    border: none;
+}
+.error_message{
+    color: rgb(216, 84, 124);
+    text-align: center;
+    font-size: .75rem;
+}
+
+input[type="checkbox"]:focus{
+    outline: 2px solid rgba(193, 126, 255, 0.377);
+}
