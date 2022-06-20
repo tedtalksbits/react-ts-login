@@ -46,6 +46,7 @@ const Login = () => {
             "user",
             JSON.stringify({
                 id: user.name + "-" + hash,
+                name: user.name,
             })
         );
 

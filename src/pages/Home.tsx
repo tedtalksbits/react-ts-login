@@ -25,10 +25,10 @@ const Home = () => {
         localStorage.removeItem("user");
     };
 
-    const currentUser = localStorage.getItem("user");
+    const currentUser = JSON.parse(localStorage.getItem("user") || "{}");
 
     useEffect(() => {
-        !currentUser && navigate("/login");
+        !currentUser.id && navigate("/login");
     }, [currentUser, navigate]);
 
     // loop over each property on user and check if it is empty
@@ -45,7 +45,7 @@ const Home = () => {
                         Finish you filling out your profile
                     </Alert>
                 )}
-                <h1>Hi👋 {user?.name} </h1>
+                <h1>Hi👋 {currentUser?.name} </h1>
                 <Button onClick={handleLogout}>Logout</Button>
             </div>
         </div>
